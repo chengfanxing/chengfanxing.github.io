@@ -12,6 +12,13 @@ jobs:
     steps:
     - name: Checkout repository  # 检出仓库
       uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}  # 添加令牌以访问私有存储库
+
+    - name: Setup Node.js  # 设置 Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
 
     - name: Setup Hugo  # 设置 Hugo
       uses: peaceiris/actions-hugo@v2
