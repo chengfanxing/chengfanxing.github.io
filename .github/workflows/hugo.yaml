@@ -55,7 +55,7 @@ jobs:
           # 为了与Hugo模块的最大向后兼容性
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-          HUGO_MODULE_IMPORT_HASH: sha256
+          HUGO_MODULE_IMPORT_HASH: md5
         run: |
           hugo \
             --gc \
