@@ -3,7 +3,7 @@ name: Hugo Build and Deploy
 on:
   push:
     branches:
-      - main  # 这里根据你的默认分支名称修改，如果是 master 分支，则修改为 master
+      - main
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         run: hugo --minify
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4  # 更新为支持Node.js 20的最新版本
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
