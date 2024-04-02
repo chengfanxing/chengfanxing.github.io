@@ -24,25 +24,25 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.120.2
+      NODE_VERSION: 20
     steps:
       - name: 安装 Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: 安装 Dart Sass
-        run: sudo snap install dart-sass
+      - name: 安装 nvm
+        run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+      - name: 配置 nvm
+        run: |
+          export NVM_DIR="${HOME}/.nvm"
+          [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"
+          [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"
+          nvm install $NODE_VERSION
       - name: 检出代码
         uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-      - name: 安装 Node.js 依赖
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: 设置 Pages
-        id: pages
-        uses: actions/configure-pages@v3
-        with:
-          static_site_generator: hugo
       - name: 使用 Hugo 构建
         env:
           HUGO_ENVIRONMENT: production
@@ -50,8 +50,7 @@ jobs:
         run: |
           hugo \
             --gc \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --minify
       - name: 上传构建产物
         uses: actions/upload-pages-artifact@v2
         with:
