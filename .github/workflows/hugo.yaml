@@ -1,1 +1,31 @@
-# hugo.yaml
+name: Hugo Build and Deploy
+
+on:
+  push:
+    branches:
+      - main  # 这里根据你的默认分支名称修改，如果是 master 分支，则修改为 master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          user_name: GitHub Actions
+          user_email: actions@github.com
