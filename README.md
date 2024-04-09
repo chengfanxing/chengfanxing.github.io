@@ -14,3 +14,19 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+##### 启动hugo服务器
+```shell
+hugo server
+```
+##### 启动hugo(包含草稿内容)
+```shell
+hugo server --buildDrafts
+
+hugo server -D
+
+hugo server -D --disableFastRender
+```
+#### 添加内容
+```shell
+hugo new content posts/xxx.md
+```
