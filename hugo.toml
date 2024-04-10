@@ -85,6 +85,29 @@ enableEmoji = true
     weight = 3
     [menu.main.params]
       icon = "fa-solid fa-tags"
+  [[menu.main]]
+    identifier = "friends"
+    parent = ""
+    pre = ""
+    post = ""
+    name = "朋友"
+    url = "/friends/"
+    title = ""
+    weight = 4
+    [menu.main.params]
+      icon = "fa-solid fa-users-viewfinder fa-fw fa-sm"
+  [[menu.main]]
+    identifier = "cohhi"
+    parent = ""
+    pre = ""
+    post = ""
+    name = "cohhi"
+    url = "/cohhi/"
+    title = ""
+    weight = 4
+    [menu.main.params]
+      icon = "fa-regular fa-id-card fa-fw"
+
 
 # -------------------------------------------------------------------------------------
 # Related content Configuration
@@ -318,13 +341,13 @@ enableEmoji = true
   indexWithSubtitle = true
   # FixIt 0.2.14 | NEW FixIt will, by default, inject a theme meta tag in the HTML head on the home page only.
   # You can turn it off, but we would really appreciate if you don’t, as this is a good way to watch FixIt's popularity on the rise.
-  disableThemeInject = false
+  disableThemeInject = true
 
   # Author Configuration
   [params.author]
     name = "cohhi"
     email = "2507138657@qq.com"
-    link = "cohhi.github.io"
+    link = "https://github.com/cohhi"
     avatar = "https://avatars.githubusercontent.com/u/71576964?v=4"
 
   # FixIt 0.3.0 | NEW public Git repository information only then enableGitInfo is true
@@ -345,7 +368,7 @@ enableEmoji = true
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
-    svgFavicon = ""
+    svgFavicon = "favicon-32x32.ico"
     # Safari mask icon color
     iconColor = "#5bbad5"
     # Windows v8-10 tile color
@@ -436,9 +459,10 @@ enableEmoji = true
     # ICP info only in China (HTML format is supported)
     icp = ""
     # license info (HTML format is supported)
+    license = "MIT"
     # FixIt 0.3.0 | NEW whether to show Hugo and theme info
     [params.footer.powered]
-      enable = true
+      enable = false
       hugoLogo = true
       themeLogo = true
     # FixIt 0.2.17 | CHANGED Site creation time
