@@ -28,7 +28,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Hugo
-        run: hugo version
+        run: |
+          sudo apt-get install hugo
+          hugo version
       - name: Build with Hugo
         run: hugo --minify
       - name: Upload artifact
@@ -49,7 +51,9 @@ jobs:
         id: deployment
         uses: actions/checkout@v4
       - name: Setup Hugo
-        run: hugo version
+        run: |
+          sudo apt-get install hugo
+          hugo version
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
