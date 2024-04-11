@@ -1,2 +1,6 @@
 # WebStorm
 /.idea
+
+# hugo
+/assets/jsconfig.json
+/resources/_gen/assets/scss/css
