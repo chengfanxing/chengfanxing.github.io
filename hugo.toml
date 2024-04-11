@@ -1083,8 +1083,8 @@ enableEmoji = true
   # FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
   [params.githubCorner]
     enable = true
-    permalink = "https://github.com/hugo-fixit/FixIt"
-    title = "View source on GitHub"
+    permalink = "https://github.com/cohhi"
+    title = "cohhi on GitHub"
     position = "right" # ["left", "right"]
 
   # FixIt 0.2.14 | NEW Gravatar config
