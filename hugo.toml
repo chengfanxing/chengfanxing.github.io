@@ -96,17 +96,6 @@ enableEmoji = true
     weight = 4
     [menu.main.params]
       icon = "fa-solid fa-users-viewfinder fa-fw fa-sm"
-  [[menu.main]]
-    identifier = "cohhi"
-    parent = ""
-    pre = ""
-    post = ""
-    name = "cohhi"
-    url = "/cohhi/"
-    title = ""
-    weight = 4
-    [menu.main.params]
-      icon = "fa-regular fa-id-card fa-fw"
 
 
 # -------------------------------------------------------------------------------------
@@ -542,7 +531,7 @@ enableEmoji = true
       # whether to show social links
       social = true
       # disclaimer (HTML format is supported)
-      disclaimer = "<p>本网站的所有信息仅供参考。我们尽最大努力确保信息的准确性，但不对信息的完整性、实时性或准确性负责。因使用本网站而造成的任何损失或损害，本网站概不负责。</br>本网站可能包含指向第三方网站的链接。这些链接仅供您方便参考。链接到的第三方网站内容不在我们的控制范围内，我们对其内容不承担任何责任。</p>"
+      disclaimer = ""
     # Home page posts
     [params.home.posts]
       enable = true
@@ -663,7 +652,7 @@ enableEmoji = true
     # whether to enable the fontawesome extended syntax
     fontawesome = true
     # license info (HTML format is supported)
-    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>'
+    license = ''
     # whether to show link to Raw Markdown content of the post
     linkToMarkdown = true
     # FixIt 0.3.0 | NEW whether to show link to view source code of the post
@@ -1002,7 +991,7 @@ enableEmoji = true
   [params.watermark]
     enable = true
     # watermark's text (HTML format is supported)
-    content = "cohhi"
+    content = "chengfanxing"
     # watermark's transparency
     opacity = 0.08
     # watermark's width. unit: px
@@ -1083,8 +1072,8 @@ enableEmoji = true
   # FixIt 0.2.14 | NEW GitHub banner in the top-right or top-left corner
   [params.githubCorner]
     enable = true
-    permalink = "https://github.com/cohhi"
-    title = "cohhi on GitHub"
+    permalink = "https://github.com/chengfanxing"
+    title = "chengfanxing on GitHub"
     position = "right" # ["left", "right"]
 
   # FixIt 0.2.14 | NEW Gravatar config
