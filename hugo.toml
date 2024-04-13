@@ -9,9 +9,9 @@
 # -------------------------------------------------------------------------------------
 
 # website title
-title = "Cohhi"
+title = "chengfanxing"
 # Hostname (and path) to the root
-baseURL = "https://cohhi.github.io"
+baseURL = "https://chengfanxing.github.io"
 # theme
 theme = "FixIt"
 # theme list
