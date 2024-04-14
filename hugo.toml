@@ -93,9 +93,20 @@ enableEmoji = true
     name = "朋友"
     url = "/friends/"
     title = ""
-    weight = 4
+    weight = 0
     [menu.main.params]
       icon = "fa-solid fa-users-viewfinder fa-fw fa-sm"
+  [[menu.main]]
+    identifier = "chengfanxing"
+    parent = ""
+    pre = ""
+    post = ""
+    name = "chengfanxing"
+    url = "/chengfanxing/"
+    title = ""
+    weight = 1
+    [menu.main.params]
+      icon = "fa-regular fa-id-card fa-fw fa-fw fa-sm"
 
 
 # -------------------------------------------------------------------------------------

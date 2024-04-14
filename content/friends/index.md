@@ -3,7 +3,7 @@ title: 伙计们
 subtitle:
 layout: friends
 date: 2024-04-09T23:55:34+08:00
-description: "cohhi's friends"
+description: "chengfanxing's friends"
 keywords:
   - 'Hugo FixIt'
   - 'friends template'
